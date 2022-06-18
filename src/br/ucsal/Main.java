@@ -1,9 +1,7 @@
 package br.ucsal;
 
-import br.ucsal.search.BinarySearch;
-import br.ucsal.search.LinearSeach;
-import br.ucsal.sort.BubbleSort;
-import br.ucsal.sort.QuickSort;
+
+
 
 public class Main {
 
@@ -18,7 +16,7 @@ public class Main {
 		
 		
 		long startTime = System.nanoTime();
-		QuickSort.sort(arr3, 1, 11);
+		//QuickSort.sort(arr3, 1, 11);
 		long endTime = System.nanoTime();
 		
 		System.out.println("");
