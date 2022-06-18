@@ -1,20 +1,13 @@
 package br.ucsal.sort;
 
-public class QuickSort {
+import br.ucsal.Testable;
+
+public class QuickSort implements Testable {
 	
-	private String  nome = "Selection Sort";
 	private  Integer numComparacao =0 ;
 	private Integer numMovimento = 0;
 	
-	
 
-	public String getNome() {
-		return nome;
-	}
-
-
-
-	
 
 	public Integer getNumComparacao() {
 		return numComparacao;
@@ -73,6 +66,15 @@ public class QuickSort {
 			
 		}else {
 		}
+	}
+
+
+
+
+	@Override
+	public <T extends Comparable<T>> void sort(T[] arr) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

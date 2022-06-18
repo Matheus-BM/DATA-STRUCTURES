@@ -1,33 +1,22 @@
 package br.ucsal.sort;
 
-public class SelectionSort {
-	private String  nome = "Selection Sort";
+import br.ucsal.Testable;
+
+public class SelectionSort implements Testable {
+	
 	private  Integer numComparacao =0 ;
 	private Integer numMovimento = 0;
-	
-	
-
-	public String getNome() {
-		return nome;
-	}
-
-
-
-	
 
 	public Integer getNumComparacao() {
 		return numComparacao;
 	}
 
 
-
-
 	public Integer getNumMovimento() {
 		return numMovimento;
 	}
-
 	
-public <T extends Comparable<T>> void  sort(T[] arr ) {
+	public <T extends Comparable<T>> void  sort(T[] arr ) {
 	 
 		
 		
@@ -52,6 +41,8 @@ public <T extends Comparable<T>> void  sort(T[] arr ) {
 			
 			
 		}
+		System.out.println("número de movimento:" + numMovimento);
+		System.out.println("número de comparações:" + numComparacao);
 		
 	}
 

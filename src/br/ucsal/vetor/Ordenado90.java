@@ -17,7 +17,7 @@ public class Ordenado90 {
 
 		for (int i = 0; i < v.length; i++) {
 			if(new Random().nextInt(10)==0&&count>=1){
-				v[i] = new Random().nextInt(v.length+1,(v.length*v.length));
+				v[i] = new Random().nextInt(v.length+1,(v.length+v.length));
 				count--;
 			}else if(total<=v.length) v[i] = i+1;
 			total++;

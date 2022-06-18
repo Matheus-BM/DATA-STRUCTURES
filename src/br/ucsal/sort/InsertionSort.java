@@ -1,33 +1,23 @@
 package br.ucsal.sort;
 
-public class InsertionSort {
+import br.ucsal.Testable;
 
-	private String  nome = "Insertion Sort";
+public class InsertionSort implements Testable {
+
 	private  Integer numComparacao =0 ;
 	private Integer numMovimento = 0;
-	
-	
-
-	public String getNome() {
-		return nome;
-	}
-
-
-
-	
 
 	public Integer getNumComparacao() {
 		return numComparacao;
 	}
 
 
-
-
 	public Integer getNumMovimento() {
 		return numMovimento;
 	}
+	
 
-	public <T extends Comparable<T>> T[] sort(T[] arr ) {
+	public <T extends Comparable<T>> void sort(T[] arr ) {
 		
 		for (int i = 0; i < arr.length; i++) {
 			T temp = arr[i];
@@ -44,8 +34,9 @@ public class InsertionSort {
 			
 			
 		}
+		System.out.println("número de movimento:" + numMovimento);
+		System.out.println("número de comparações:" + numComparacao);
 		
-		return arr;
 	}
 
 }
