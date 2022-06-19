@@ -1,5 +1,6 @@
 package br.ucsal;
 
+import br.ucsal.sort.BubbleSort;
 import br.ucsal.vetor.Aleatorio;
 import br.ucsal.vetor.InversamenteOrdenado;
 import br.ucsal.vetor.Ordenado;
@@ -17,10 +18,11 @@ public class Main {
 			Integer[] invesamenteOrdenado =new InversamenteOrdenado(100).criar();
 
 
-			//new Teste("Bubble Sort", "Ordenado90", ordenado90, new BubbleSort()).print();
-			//new Teste("Bubble Sort", "Ordenado", ordenado, new BubbleSort()).print();
-			//new Teste("Bubble Sort", "Aleatorio", aleatorio, new BubbleSort()).print();
-			//new Teste("Bubble Sort", "InversamenteOrdenado", invesamenteOrdenado, new BubbleSort()).print();
+			new Teste("Bubble Sort", "Ordenado90", ordenado90.clone(), new BubbleSort()).print();
+			printVetor(ordenado90);
+			new Teste("Bubble Sort", "Ordenado", ordenado, new BubbleSort()).print();
+			new Teste("Bubble Sort", "Aleatorio", aleatorio, new BubbleSort()).print();
+			new Teste("Bubble Sort", "InversamenteOrdenado", invesamenteOrdenado, new BubbleSort()).print();
 
 			/*
 			new Teste("Heap Sort", "Ordenado90", ordenado90, new HeapSort()).print();

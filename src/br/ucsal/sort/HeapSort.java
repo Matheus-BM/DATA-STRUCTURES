@@ -32,8 +32,8 @@ public class HeapSort implements Testable {
 			exch(pq, 1, k--);
 			sink(pq, 1, k);
 		}
-		System.out.println("número de movimento:" + numMovimento);
-		System.out.println("número de comparações:" + numComparacao);
+//		System.out.println("número de movimento:" + numMovimento);
+//		System.out.println("número de comparações:" + numComparacao);
 	}
 
 

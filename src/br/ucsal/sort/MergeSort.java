@@ -1,7 +1,10 @@
 package br.ucsal.sort;
 
-public class MergeSort {
+import br.ucsal.Testable;
 
+public class MergeSort implements Testable {
+	private  Integer numComparacao =0 ;
+	private Integer numMovimento = 0;
 	private  <T extends Comparable<T>> void   merge(T[] arr, int i, int f) {
 
 		if(f>i){
@@ -30,7 +33,8 @@ public class MergeSort {
 				arr[k] = arrAux[m + 1 + j];
 				j++;
 			}
-
+			numComparacao++;
+			numMovimento++;
 
 
 		}
@@ -38,17 +42,30 @@ public class MergeSort {
 			arr[k] =arrAux[inicio + i];
 			i++;
 			k++;
+			numMovimento++;
 		}
 
 		while (j < tam2) {
 			arr[k] = arrAux[m + 1 + j];
 			j++;
 			k++;
+			numMovimento++;
 		}
 
 	}
-	public<T extends Comparable> void  sort(T[] arr){
-		 merge(arr, 0, arr.length-1);
+
+	@Override
+	public <T extends Comparable<T>> void sort(T[] arr) {
+		merge(arr, 0, arr.length-1);
 	}
 
+	@Override
+	public Integer getNumComparacao() {
+		return numComparacao;
+	}
+
+	@Override
+	public Integer getNumMovimento() {
+		return numMovimento;
+	}
 }
