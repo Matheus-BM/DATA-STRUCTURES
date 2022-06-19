@@ -44,8 +44,8 @@ public class SelectionSort implements Testable {
 			
 			
 		}
-		System.out.println("número de movimento:" + numMovimento);
-		System.out.println("número de comparações:" + numComparacao);
+//		System.out.println("número de movimento:" + numMovimento);
+//		System.out.println("número de comparações:" + numComparacao);
 		
 	}
 

@@ -35,16 +35,22 @@ public class Teste {
 
 		System.out.println("- número de movimento:" + mediaMovimento);
 		System.out.println("- número de comparações:" + mediaComparacao);
-		return "- terminou em: " + timeDelta + " micro segundos";
+		return "- terminou em: " + timeDelta + " nano segundos";
 
 	}
 
 
 	public void print() {
+		if(tamanho==100000){
+			System.out.println("nome: " + nome + " | tipo: " + tipo + " | tamanho: " + tamanho);
+			System.out.println(getTempoExecucao());
+		}else {
 		System.out.println(Arrays.toString(arr));
-		System.out.println("nome: " + nome + " | tipo: " + tipo + " | tamanho: " + tamanho);
-		System.out.println(getTempoExecucao());
-		System.out.println(Arrays.toString(arr));
+			System.out.println("nome: " + nome + " | tipo: " + tipo + " | tamanho: " + tamanho);
+			System.out.println(getTempoExecucao());
+			System.out.println(Arrays.toString(arr));
+
+		}
 
 	}
 

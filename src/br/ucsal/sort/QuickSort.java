@@ -29,24 +29,24 @@ public class QuickSort implements Testable {
 	}
 
 
-	public <T extends Comparable>  int repart(T[] arr, int  p, int r ) {
+	public <T extends Comparable>  int repart(T[] arr, int  inicio, int fim) {
 		T pivo;
 		int  i,j;
 
-		pivo = arr[(p+r)/2];
+		pivo = arr[(inicio+ fim)/2];
 
 		this.numComparacao++;
-		i = p-1;
-		j = r+1;
+		i = inicio-1;
+		j = fim +1;
 
 		while(i<j) {
 			do {
 				j--;
-			}while(arr[j].compareTo( pivo)>0);
+			}while(i<=j&&arr[j].compareTo( pivo)>0);
 			
 			do {
 				i++;
-			}while(arr[i].compareTo( pivo)<0);
+			}while(i<=j&&arr[i].compareTo( pivo)<0);
 			
 			if(i< j) {
 				swap(arr,i,j);
@@ -73,7 +73,7 @@ public class QuickSort implements Testable {
 		int q;
 		if(p<r) {
 			q = repart(arr, p,r);
-			sort(arr,0,q);
+			sort(arr,p,q);
 			sort(arr,q+1,r);
 			
 		}

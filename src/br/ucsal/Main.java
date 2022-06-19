@@ -14,7 +14,6 @@ public class Main {
 		menu();
 
 
-
 //		Integer[] ordenado90 = new Ordenado90(100).criar();
 //		Integer[] ordenado = new Ordenado(100).criar();
 //		Integer[] aleatorio = new Aleatorio(100).criar();
@@ -82,9 +81,9 @@ public class Main {
 
 				do {
 					metodo = menuSort();
-					if(metodo!=null){
+					if(metodo != null) {
 						Integer[] vetorDeTeste = vetorBase.getVetor().clone();
-						new Teste(metodo.getNome(), vetorBase.getTipo(), vetorDeTeste,  metodo).print();
+						new Teste(metodo.getNome(), vetorBase.getTipo(), vetorDeTeste, metodo).print();
 					}
 				} while (metodo != null);
 			}
@@ -125,7 +124,7 @@ public class Main {
 
 	public static Vetor menuTipoVetor() {
 		Scanner sc = new Scanner(System.in);
-		Vetor novoVetor;
+		Vetor novoVetor=null;
 		int opVetor = 0;
 		System.out.println("Escolha um tipo de vetor");
 		System.out.println("1->Ordenado");
@@ -134,32 +133,40 @@ public class Main {
 		System.out.println("4->Ordenado 90%");
 		System.out.println("5->Encerrar programa");
 		opVetor = sc.nextInt();
-		System.out.println("Inserir tamanho do vertor: ");
-		int tamanhoVetor = sc.nextInt();
 		switch (opVetor) {
 			case 1 -> {
-			  novoVetor= new Ordenado(tamanhoVetor);
+				int tamanhoVetor = getTamanhoVetor(sc);
+				novoVetor = new Ordenado(tamanhoVetor);
 
 			}
 			case 2 -> {
+				int tamanhoVetor = getTamanhoVetor(sc);
 				novoVetor = new Aleatorio(tamanhoVetor);
 
 			}
 			case 3 -> {
+				int tamanhoVetor = getTamanhoVetor(sc);
 				novoVetor = new InversamenteOrdenado(tamanhoVetor);
 
 			}
 			case 4 -> {
+				int tamanhoVetor = getTamanhoVetor(sc);
 				novoVetor = new Ordenado90(tamanhoVetor);
 
 			}
-			default -> novoVetor = null;
+			default -> System.exit(0);
 		}
 
 
 		return novoVetor;
 
 
+	}
+
+	private static int getTamanhoVetor(Scanner sc) {
+		System.out.println("Inserir tamanho do vertor: ");
+		int tamanhoVetor = sc.nextInt();
+		return tamanhoVetor;
 	}
 
 
