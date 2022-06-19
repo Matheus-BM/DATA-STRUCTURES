@@ -1,8 +1,10 @@
 package br.ucsal.vetor;
 
+import br.ucsal.Vetor;
+
 import java.util.Random;
 
-public class Ordenado90 {
+public class Ordenado90 implements Vetor {
 	private Integer[] v;
 	private Double count;
 
@@ -12,7 +14,7 @@ public class Ordenado90 {
 		v = new Integer[tamanho];
 		count = tamanho*.1;
 	}
-	public  Integer[] criar(){
+	public  void criar(){
 
 
 		for (int i = 0; i < v.length; i++) {
@@ -23,6 +25,15 @@ public class Ordenado90 {
 			total++;
 		}
 		if(count>0) criar();
+	}
+
+	@Override
+	public String getTipo() {
+		return "Ordenado90";
+	}
+
+	@Override
+	public Integer[] getVetor() {
 		return v;
 	}
 }

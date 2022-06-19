@@ -1,6 +1,8 @@
 package br.ucsal.vetor;
 
-public class Ordenado {
+import br.ucsal.Vetor;
+
+public class Ordenado implements Vetor {
 
 	private Integer[] v;
 
@@ -8,10 +10,20 @@ public class Ordenado {
 		v = new Integer[tamanho];
 	}
 
-	public Integer[] criar(){
+	public void criar(){
 		for (int i = 0; i < v.length; i++) {
 			v[i] = i+1;
 		}
+
+	}
+
+	@Override
+	public String getTipo() {
+		return "Ordenado";
+	}
+
+	@Override
+	public Integer[] getVetor() {
 		return v;
 	}
 }
