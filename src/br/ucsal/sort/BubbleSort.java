@@ -22,7 +22,9 @@ public class BubbleSort implements Testable	 {
 
 
 
-
+	public String getNome() {
+		return "Bubble Sort";
+	}
 
 		public <T extends Comparable<T>> void sort(T[] arr ) {
 			

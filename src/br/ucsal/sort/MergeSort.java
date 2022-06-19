@@ -68,4 +68,9 @@ public class MergeSort implements Testable {
 	public Integer getNumMovimento() {
 		return numMovimento;
 	}
+
+	@Override
+	public String getNome() {
+		return "Merge Sort";
+	}
 }

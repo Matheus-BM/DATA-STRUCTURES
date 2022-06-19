@@ -35,7 +35,9 @@ public class HeapSort implements Testable {
 //		System.out.println("número de movimento:" + numMovimento);
 //		System.out.println("número de comparações:" + numComparacao);
 	}
-
+	public String getNome() {
+		return "Heap Sort";
+	}
 
 	private  void sink(Comparable[] pq, int k, int n) {
 		while (2*k <= n) {

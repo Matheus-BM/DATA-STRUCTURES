@@ -24,6 +24,9 @@ public class QuickSort implements Testable {
 		return numMovimento;
 	}
 
+	public String getNome() {
+		return "Quick Sort";
+	}
 
 
 	public <T extends Comparable>  int repart(T[] arr, int  p, int r ) {

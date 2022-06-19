@@ -6,4 +6,6 @@ public interface Testable {
 	public Integer getNumComparacao();
 	public Integer getNumMovimento();
 
+	String getNome();
+
 }

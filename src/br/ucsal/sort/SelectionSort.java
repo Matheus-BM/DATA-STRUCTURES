@@ -11,6 +11,9 @@ public class SelectionSort implements Testable {
 		return numComparacao;
 	}
 
+	public String getNome() {
+		return "Selection Sort";
+	}
 
 	public Integer getNumMovimento() {
 		return numMovimento;
