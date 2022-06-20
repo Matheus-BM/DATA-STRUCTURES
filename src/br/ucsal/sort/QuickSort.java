@@ -4,15 +4,13 @@ import br.ucsal.Testable;
 
 public class QuickSort implements Testable {
 
-	private  Long numComparacao = new Long(0);
-	private Long numMovimento = new Long(0);
+	private Long numComparacao = 0L;
+	private Long numMovimento = 0L;
 
 
 	public Long getNumComparacao() {
 		return numComparacao;
 	}
-
-
 
 
 	public Long getNumMovimento() {
@@ -21,7 +19,7 @@ public class QuickSort implements Testable {
 
 	@Override
 	public <T extends Comparable<T>> void sort(T[] arr) {
-		sort(arr,0, arr.length-1);
+		sort(arr, 0, arr.length - 1);
 	}
 
 
@@ -30,35 +28,35 @@ public class QuickSort implements Testable {
 	}
 
 
-	public <T extends Comparable>  int repart(T[] arr, int  inicio, int fim) {
+	public <T extends Comparable> int repart(T[] arr, int inicio, int fim) {
 		T pivo;
-		int  i,j;
+		int i, j;
 
-		pivo = arr[(inicio+ fim)/2];
+		pivo = arr[(inicio + fim) / 2];
 
-		i = inicio-1;
-		j = fim +1;
+		i = inicio - 1;
+		j = fim + 1;
 
-		while(i<j) {
+		while (i < j) {
 			do {
 				this.numComparacao++;
 				j--;
-			}while(i<=j&&arr[j].compareTo( pivo)>0);
+			} while (i <= j && arr[j].compareTo(pivo) > 0);
 
 			do {
 				this.numComparacao++;
 				i++;
-			}while(i<=j&&arr[i].compareTo( pivo)<0);
-			
-			if(i< j) {
-				swap(arr,i,j);
+			} while (i <= j && arr[i].compareTo(pivo) < 0);
+
+			if(i < j) {
+				swap(arr, i, j);
 			}
-			
+
 		}
 		return j;
-	
+
 	}
-	
+
 
 	private <T extends Comparable> void swap(T[] arr, int i, int j) {
 		this.numMovimento++;
@@ -66,25 +64,19 @@ public class QuickSort implements Testable {
 		aux = arr[i];
 		arr[i] = arr[j];
 		arr[j] = aux;
-		
+
 	}
 
 
-
-	public <T extends Comparable> void sort(T[] arr,int p, int r) {
+	public <T extends Comparable> void sort(T[] arr, int p, int r) {
 		int q;
-		if(p<r) {
-			q = repart(arr, p,r);
-			sort(arr,p,q);
-			sort(arr,q+1,r);
-			
+		if(p < r) {
+			q = repart(arr, p, r);
+			sort(arr, p, q);
+			sort(arr, q + 1, r);
+
 		}
 	}
-
-
-
-
-	
 
 
 }

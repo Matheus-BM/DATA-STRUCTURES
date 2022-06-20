@@ -4,8 +4,8 @@ import br.ucsal.Testable;
 
 public class HeapSort implements Testable {
 
-	private  Long numComparacao = new Long(0);
-	private Long numMovimento = new Long(0);
+	private Long numComparacao = 0L;
+	private Long numMovimento = 0L;
 
 
 	public Long getNumComparacao() {
