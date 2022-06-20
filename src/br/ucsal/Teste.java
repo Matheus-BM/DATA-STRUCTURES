@@ -20,8 +20,6 @@ public class Teste {
 
 	public String getTempoExecucao() {
 		long timeDelta = 0;
-		int mediaMovimento = 0;
-		int mediaComparacao = 0;
 
 
 		long startTime = System.nanoTime();
@@ -29,12 +27,12 @@ public class Teste {
 		method.sort(arr);
 
 		long endTime = System.nanoTime();
-		mediaMovimento += method.getNumMovimento();
-		mediaComparacao += method.getNumComparacao();
-		timeDelta += (endTime - startTime);
 
-		System.out.println("- número de movimento:" + mediaMovimento);
-		System.out.println("- número de comparações:" + mediaComparacao);
+
+		timeDelta = (endTime - startTime);
+
+		System.out.println("- número de movimento:" + method.getNumMovimento());
+		System.out.println("- número de comparações:" + method.getNumComparacao());
 		return "- terminou em: " + timeDelta + " nano segundos";
 
 	}

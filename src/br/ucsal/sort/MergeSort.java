@@ -3,8 +3,10 @@ package br.ucsal.sort;
 import br.ucsal.Testable;
 
 public class MergeSort implements Testable {
-	private  Integer numComparacao =0 ;
-	private Integer numMovimento = 0;
+	private  Long numComparacao = new Long(0);
+	private Long numMovimento = new Long(0);
+
+
 	private  <T extends Comparable<T>> void   merge(T[] arr, int i, int f) {
 
 		if(f>i){
@@ -60,12 +62,12 @@ public class MergeSort implements Testable {
 	}
 
 	@Override
-	public Integer getNumComparacao() {
+	public Long getNumComparacao() {
 		return numComparacao;
 	}
 
 	@Override
-	public Integer getNumMovimento() {
+	public Long getNumMovimento() {
 		return numMovimento;
 	}
 

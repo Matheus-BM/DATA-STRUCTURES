@@ -3,21 +3,27 @@ package br.ucsal.sort;
 import br.ucsal.Testable;
 
 public class SelectionSort implements Testable {
-	
-	private  Integer numComparacao =0 ;
-	private Integer numMovimento = 0;
 
-	public Integer getNumComparacao() {
+	private  Long numComparacao = new Long(0);
+	private Long numMovimento = new Long(0);
+
+
+	public Long getNumComparacao() {
 		return numComparacao;
+	}
+
+
+
+
+	public Long getNumMovimento() {
+		return numMovimento;
 	}
 
 	public String getNome() {
 		return "Selection Sort";
 	}
 
-	public Integer getNumMovimento() {
-		return numMovimento;
-	}
+
 	
 	public <T extends Comparable<T>> void  sort(T[] arr ) {
 	 

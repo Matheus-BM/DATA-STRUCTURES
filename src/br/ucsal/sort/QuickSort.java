@@ -4,25 +4,26 @@ import br.ucsal.Testable;
 
 public class QuickSort implements Testable {
 
-	private  Integer numComparacao =0 ;
-	private Integer numMovimento = 0;
+	private  Long numComparacao = new Long(0);
+	private Long numMovimento = new Long(0);
 
 
-	@Override
-	public <T extends Comparable<T>> void sort(T[] arr) {
-		sort(arr,0, arr.length-1);
-	}
-
-	public Integer getNumComparacao() {
+	public Long getNumComparacao() {
 		return numComparacao;
 	}
 
 
 
 
-	public Integer getNumMovimento() {
+	public Long getNumMovimento() {
 		return numMovimento;
 	}
+
+	@Override
+	public <T extends Comparable<T>> void sort(T[] arr) {
+		sort(arr,0, arr.length-1);
+	}
+
 
 	public String getNome() {
 		return "Quick Sort";
@@ -35,16 +36,17 @@ public class QuickSort implements Testable {
 
 		pivo = arr[(inicio+ fim)/2];
 
-		this.numComparacao++;
 		i = inicio-1;
 		j = fim +1;
 
 		while(i<j) {
 			do {
+				this.numComparacao++;
 				j--;
 			}while(i<=j&&arr[j].compareTo( pivo)>0);
-			
+
 			do {
+				this.numComparacao++;
 				i++;
 			}while(i<=j&&arr[i].compareTo( pivo)<0);
 			

@@ -3,18 +3,19 @@ package br.ucsal.sort;
 import br.ucsal.Testable;
 
 public class HeapSort implements Testable {
-	
-	private  Integer numComparacao =0 ;
-	private Integer numMovimento = 0;
-	
+
+	private  Long numComparacao = new Long(0);
+	private Long numMovimento = new Long(0);
 
 
-	public Integer getNumComparacao() {
+	public Long getNumComparacao() {
 		return numComparacao;
 	}
 
 
-	public Integer getNumMovimento() {
+
+
+	public Long getNumMovimento() {
 		return numMovimento;
 	}
 

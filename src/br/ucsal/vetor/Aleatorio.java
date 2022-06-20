@@ -14,7 +14,7 @@ public class Aleatorio implements Vetor {
 
 		for (int i = 0; i < v.length; i++) {
 			Random r = new Random();
-			v[i] = r.nextInt();
+			v[i] = r.nextInt(0,v.length*9);
 		}
 
 	}
